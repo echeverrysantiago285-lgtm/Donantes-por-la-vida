@@ -1,0 +1,52 @@
+DONANTES POR LA VIDA - Prototipo (Semana 3)
+
+QUE NECESITAS INSTALAR
+1. Java JDK 17 o superior (recomendado 21): https://adoptium.net  (instala la version "Temurin JDK")
+2. Visual Studio Code + extension "Extension Pack for Java" (solo para ver o editar el codigo)
+3. Un navegador (Chrome, Edge o Firefox)
+
+COMO EJECUTARLO
+- Windows: doble clic en ejecutar.bat
+- Mac o Linux: en la terminal, ./ejecutar.sh
+- Cualquier sistema: abre una terminal en esta carpeta y escribe:  java src/Servidor.java
+Luego abre en el navegador:  http://localhost:8080
+Para detenerlo: Ctrl+C en la terminal.
+
+DONDE EDITAR
+- web/index.html            pantallas y diseno (agrega web/img/hero.jpg para la foto de inicio)
+- data/preguntas.txt        preguntas y resultados de la autoevaluacion (los define TSLB)
+- data/jornadas.txt         jornadas disponibles
+- src/Servidor.java         servidor y logica (Java)
+
+DONDE QUEDAN LOS DATOS
+- data/solicitudes.csv      solicitudes de hora
+- data/recordatorios.csv    recordatorios (simulados: no se envia correo real)
+Las respuestas de la autoevaluacion NO se guardan.
+
+PENDIENTE PARA LA SEMANA 4: MySQL, correo real, login de administrador, mapa.
+
+ADMINISTRADOR (login)
+- En la pagina, boton "Acceder" (arriba a la derecha).
+- Primera vez: usuario  admin   clave  admin123   (se crea sola al iniciar el servidor)
+- CAMBIA LA CLAVE antes de mostrar el proyecto:
+      java src/Servidor.java clave TU_NUEVA_CLAVE
+  (la clave se guarda cifrada en data/admin.txt; no se guarda en texto)
+- El panel permite agregar y eliminar jornadas y ver las solicitudes recibidas.
+- La sesion dura 30 minutos. Tras 5 intentos fallidos se bloquea 5 minutos.
+- No subas data/admin.txt ni los .csv a GitHub.
+
+ESTRUCTURA DE LA PAGINA
+- web/index.html      pantallas (inicio, requisitos, proceso, mitos, cuidados, autoevaluacion, sitios, reserva, administrador)
+- web/css/estilo.css  colores y diseno (la paleta esta al inicio, en :root)
+- web/js/app.js       logica, dividida en secciones numeradas
+- web/js/config.js    AQUI PONES TUS IMAGENES, VIDEOS, REDES Y CONTACTO
+- web/img/ y web/video/   guarda alli tus archivos
+
+IMAGENES Y VIDEOS
+1. Copia el archivo a web/img/ (jpg, png, webp) o web/video/ (mp4, webm).
+2. Abre web/js/config.js y escribe la ruta en el espacio que quieras, por ejemplo:
+      'hero': { tipo: 'img', src: 'img/hero.jpg' },
+      'paso-3': { tipo: 'video', src: 'video/donacion.mp4' },
+      'cuidados-despues': { tipo: 'youtube', src: 'ID_DEL_VIDEO' },
+3. Guarda y recarga el navegador con Ctrl+F5. No hace falta reiniciar el servidor.
+Mientras un espacio este vacio, la pagina muestra un recuadro gris con su nombre.

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Donantes por la Vida</title><link rel="stylesheet" href="css/estilo.css"></head><body>
+<!-- Iconos reutilizables: <svg class="ic"><use href="#nombre"/></svg> -->
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="gota" viewBox="0 0 24 24"><path d="M12 3C12 3 5 11 5 15a7 7 0 0 0 14 0C19 11 12 3 12 3Z"/></symbol>
+<symbol id="corazon" viewBox="0 0 24 24"><path d="M12 20C4 14 3 9 6 6.5 8.5 4.500 11 6 12 8c1-2 3.500-3.500 6-1.500 3 2.500 2 7.500-6 13.500Z"/></symbol>
+<symbol id="escudo" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6Z M9 12l2 2 4-4"/></symbol>
+<symbol id="personas" viewBox="0 0 24 24"><circle cx="9" cy="9" r="3"/><path d="M3 20c0-4 3-6 6-6s6 2 6 6"/><circle cx="17" cy="8" r="2.500"/><path d="M16 14c3 0 5 2 5 5"/></symbol>
+<symbol id="calendario" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></symbol>
+<symbol id="id" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M6 16c0-2 6-2 6 0M14 10h4M14 14h4"/></symbol>
+<symbol id="usuario" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></symbol>
+<symbol id="pastilla" viewBox="0 0 24 24"><path d="M5.500 12.500a4 4 0 0 0 6 6l7-7a4 4 0 0 0-6-6ZM9 9l6 6"/></symbol>
+<symbol id="peso" viewBox="0 0 24 24"><path d="M6 8h12l2 12H4ZM9 8a3 3 0 0 1 6 0"/></symbol>
+<symbol id="casa" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9H4Z"/></symbol>
+<symbol id="lista" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></symbol>
+<symbol id="flecha" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</defs></svg>
+<div id="app">
+<header><div class="marca" onclick="ir('inicio')"><svg class="ic"><use href="#gota"/></svg><div>Donantes<br>por la vida</div></div>
+ <button class="burger" onclick="alternarMenu()" aria-label="Menú">☰</button></header>
+<div id="menu"></div>
+
+<!-- ============ INICIO ============ -->
+<section id="inicio" class="v on">
+ <div class="hero"><div><div class="eyebrow">Dona sangre, dona vida</div><h1 class="titulo">Tu sangre puede salvar <em>vidas</em></h1>
+  <p class="sub">Cada donación cuenta. Infórmate y sé parte del cambio.</p>
+  <button class="btn" onclick="iniciarEval()">Quiero donar <svg class="ic" style="width:18px;height:18px"><use href="#flecha"/></svg></button></div>
+  <div class="medio m-hero" data-medio="hero"></div></div>
+ <div class="pad"><div class="aviso">Esta plataforma <b>orienta</b> y no certifica si eres apto: la evaluación final la hace el personal del centro de donación.</div></div>
+ <h2 class="sec">Conoce más sobre donar</h2>
+ <div class="grid2">
+  <button class="tile" onclick="ir('requisitos')"><div class="medio m-card" data-medio="card-requisitos"></div><span>Requisitos de la donación</span></button>
+  <button class="tile" onclick="ir('proceso')"><div class="medio m-card" data-medio="card-proceso"></div><span>Proceso de la donación</span></button>
+  <button class="tile" onclick="ir('mitos')"><div class="medio m-card" data-medio="card-mitos"></div><span>Mitos sobre la donación</span></button>
+  <button class="tile" onclick="ir('cuidados')"><div class="medio m-card" data-medio="card-cuidados"></div><span>Cuidados pre y post donación</span></button></div>
+ <h2 class="sec">¿Cómo donar? <span class="sub" style="font-size:14px;font-weight:normal">Es más fácil de lo que piensas</span></h2>
+ <div class="pasos"><div><svg class="ic"><use href="#calendario"/></svg><b>1. Agenda</b>Reserva tu hora</div><div><svg class="ic"><use href="#id"/></svg><b>2. Acude</b>Lleva tu documento</div>
+  <div><svg class="ic"><use href="#gota"/></svg><b>3. Dona</b>Dura unos minutos</div><div><svg class="ic"><use href="#corazon"/></svg><b>4. Ayuda</b>Tu sangre llega a quien la necesita</div></div>
+ <div class="amor"><div class="medio" data-medio="amor"></div><div class="eyebrow" style="color:#ff8b8b">Juntos hacemos la diferencia</div>
+  <h2>Donar sangre es un acto de <em>amor</em></h2><p style="font-size:14px;line-height:1.5">No necesitas ser un héroe, solo tener ganas de ayudar.</p>
+  <button class="btn" onclick="ir('jornadas')">Conocer sitios de donación <svg class="ic" style="width:18px;height:18px"><use href="#flecha"/></svg></button></div>
+ <footer><b>Síguenos</b><div class="redes" id="redes"></div><div id="contacto"></div><p style="font-size:11px;opacity:.7;margin-top:14px">Plataforma informativa. No reemplaza la evaluación del personal de salud.</p></footer>
+</section>
+
+<!-- ============ REQUISITOS ============ -->
+<section id="requisitos" class="v"><button class="volver" onclick="ir('inicio')">← Inicio</button>
+ <div class="pad"><div class="eyebrow" style="margin-top:12px">Tu donación importa</div><h1 class="titulo">Requisitos para donar</h1><p class="sub">Antes de donar, conoce los requisitos para hacerlo de forma segura.</p></div>
+ <div class="pad"><div class="medio m-bloque" data-medio="requisitos"></div></div><div style="height:14px"></div>
+ <div class="grid3">
+  <div class="req"><i><svg class="ic"><use href="#usuario"/></svg></i><b>Edad</b>18 a 65 años</div>
+  <div class="req"><i><svg class="ic"><use href="#id"/></svg></i><b>Identificación</b>Cédula o pasaporte</div>
+  <div class="req"><i><svg class="ic"><use href="#corazon"/></svg></i><b>Buen estado de salud</b>Sin enfermedades agudas</div>
+  <div class="req"><i><svg class="ic"><use href="#pastilla"/></svg></i><b>Sin tratamientos que lo impidan</b>Consulta previa</div>
+  <div class="req"><i><svg class="ic"><use href="#peso"/></svg></i><b>Peso mínimo</b>50 kilos</div>
+  <div class="req"><i><svg class="ic"><use href="#gota"/></svg></i><b>Alimentación y descanso</b>Dormir 5 h y comer antes</div></div>
+ <div class="pad"><div class="aviso"><b>Importante:</b> si tienes dudas sobre tu estado de salud o algún medicamento, consulta con el equipo del centro. <i>Contenido de ejemplo: lo valida TSLB.</i></div>
+  <button class="btn full" onclick="iniciarEval()">Hacer la autoevaluación</button></div></section>
+
+<!-- ============ PROCESO (paso a paso) ============ -->
+<section id="proceso" class="v"><button class="volver" onclick="ir('inicio')">← Inicio</button>
+ <div class="pad"><h1 class="titulo" style="margin-top:12px">Proceso de la donación</h1><p class="sub">Así es el recorrido, paso a paso.</p></div><div style="height:12px"></div>
+ <div class="paso"><div class="num">1</div><div style="flex:1"><h3>Registro</h3><p class="sub">Presentas tu documento y completas un formulario.</p><div class="medio m-paso" data-medio="paso-1"></div></div></div>
+ <div class="paso"><div class="num">2</div><div style="flex:1"><h3>Entrevista y chequeo</h3><p class="sub">El personal de salud te hace preguntas y revisa tu estado general.</p><div class="medio m-paso" data-medio="paso-2"></div></div></div>
+ <div class="paso"><div class="num">3</div><div style="flex:1"><h3>Donación</h3><p class="sub">Se usa material estéril y desechable, con personal capacitado que te acompaña.</p><div class="medio m-paso" data-medio="paso-3"></div></div></div>
+ <div class="paso"><div class="num">4</div><div style="flex:1"><h3>Descanso</h3><p class="sub">Reposas unos minutos y recibes indicaciones para cuidarte.</p><div class="medio m-paso" data-medio="paso-4"></div></div></div>
+ <div class="pad"><p class="sub"><i>Contenido de ejemplo: lo valida TSLB.</i></p></div></section>
+
+<!-- ============ MITOS (toca para ver la realidad) ============ -->
+<section id="mitos" class="v"><button class="volver" onclick="ir('inicio')">← Inicio</button>
+ <div class="pad"><h1 class="titulo" style="margin-top:12px">Mitos sobre la donación</h1><p class="sub">Toca cada pregunta para ver la realidad.</p>
+  <div class="medio m-bloque" data-medio="mitos" style="margin:14px 0"></div></div>
+ <div id="listaMitos"></div></section>
+
+<!-- ============ CUIDADOS ============ -->
+<section id="cuidados" class="v"><button class="volver" onclick="ir('inicio')">← Inicio</button>
+ <div class="pad"><h1 class="titulo" style="margin-top:12px">Cuidados pre y post donación</h1></div>
+ <div class="dosc">
+  <div class="card"><h3>Antes de donar</h3><div class="medio m-bloque" data-medio="cuidados-antes" style="margin:10px 0"></div>
+   <p class="sub">• Duerme al menos 5 horas.<br>• Come algo ligero y bebe agua.<br>• Lleva tu documento de identificación.</p></div>
+  <div class="card"><h3>Después de donar</h3><div class="medio m-bloque" data-medio="cuidados-despues" style="margin:10px 0"></div>
+   <p class="sub">• Descansa unos minutos y toma líquidos.<br>• Evita esfuerzos intensos ese día.<br>• Avisa si te sientes mareado.</p></div>
+  <p class="sub"><i>Contenido de ejemplo: lo valida TSLB.</i></p></div></section>
+
+<!-- ============ AUTOEVALUACION ============ -->
+<section id="eval" class="v"><button class="volver" onclick="ir('inicio')">← Inicio</button>
+ <div class="pad"><h1 class="titulo" style="margin-top:12px">Autoevaluación</h1><div class="sub" id="qn"></div><div class="barra"><div id="qb"></div></div>
+  <h2 id="qt" style="font-size:19px;margin-bottom:14px"></h2><div id="qo"></div>
+  <div style="display:flex;gap:10px"><button class="btn bl" onclick="atras()">Atrás</button><button class="btn" id="sig" onclick="sigue()" style="flex:1;justify-content:center">Siguiente</button></div>
+  <p class="sub" style="margin-top:12px">Tus respuestas no se guardan. Preguntas de ejemplo: las valida TSLB.</p></div></section>
+<section id="resultado" class="v"><div class="pad"><h1 class="titulo" style="margin-top:18px">Tu orientación</h1>
+ <div class="card"><h3 id="rt"></h3><p class="sub" id="rm"></p><ul class="sub" id="rl"></ul></div>
+ <div class="aviso"><b>Esta página no certifica si eres apto.</b> La evaluación final la hace el personal del centro de donación.</div>
+ <button class="btn full" onclick="ir('jornadas')">Ver sitios de donación</button><br><br><button class="btn bl full" onclick="iniciarEval()">Repetir autoevaluación</button></div></section>
+
+<!-- ============ SITIOS DE DONACION Y RESERVA ============ -->
+<section id="jornadas" class="v"><button class="volver" onclick="ir('inicio')">← Inicio</button>
+ <div class="pad"><h1 class="titulo" style="margin-top:12px">Sitios de donación</h1><p class="sub">Elige una jornada, ve dónde queda y reserva tu hora.</p><div id="jl"></div>
+  <p class="sub">Datos de demostración.</p></div></section>
+<section id="reservar" class="v"><button class="volver" onclick="ir('jornadas')">← Sitios</button>
+ <div class="pad"><h1 class="titulo" style="margin-top:12px">Reservar hora</h1>
+  <label>Jornada</label><select id="sj"></select><label>Nombre</label><input id="sn" maxlength="100"><label>Correo electrónico</label><input id="sc" type="email" maxlength="100">
+  <div class="ck"><input type="checkbox" id="sr"><span>Quiero recibir un recordatorio en mi correo (opcional).</span></div><div class="err" id="se"></div>
+  <button class="btn full" onclick="enviar()">Enviar solicitud</button><p class="sub">Esto es una solicitud, no una cita confirmada.</p></div></section>
+<section id="gracias" class="v"><div class="pad"><h1 class="titulo" style="margin-top:18px">¡Solicitud recibida!</h1><div class="card"><p class="sub" id="gm"></p></div>
+ <div class="aviso">Recibimos tu solicitud; esto no es una cita confirmada.</div><button class="btn full" onclick="ir('inicio')">Volver al inicio</button></div></section>
+
+<!-- ============ ADMINISTRADOR ============ -->
+<section id="alogin" class="v"><button class="volver" onclick="ir('inicio')">← Inicio</button>
+ <div class="pad"><h1 class="titulo" style="margin-top:12px">Acceso administrador</h1><label>Usuario</label><input id="au" maxlength="50" autocomplete="username">
+  <label>Clave</label><input id="ap" type="password" autocomplete="current-password"><div class="err" id="ae"></div><br><button class="btn full" onclick="adminEntrar()">Ingresar</button></div></section>
+<section id="admin" class="v"><div class="pad"><h1 class="titulo" style="margin-top:18px">Panel de administración</h1>
+ <div class="card"><h3>Jornadas</h3><div id="aj"></div></div><br>
+ <div class="card"><h3>Agregar jornada</h3><label>Título</label><input id="at" maxlength="120"><label>Fecha</label><input id="af" maxlength="120" placeholder="Ej. Sáb 28 nov 2026">
+  <label>Hora</label><input id="ah" maxlength="120" placeholder="Ej. 9:00 a 14:00"><label>Lugar (dirección)</label><input id="al" maxlength="120"><div class="err" id="ag"></div><br><button class="btn full" onclick="agregarJ()">Agregar jornada</button></div><br>
+ <div class="card"><h3>Solicitudes recibidas</h3><div id="as"></div></div><br><button class="btn bl full" onclick="adminSalir()">Cerrar sesión</button></div></section>
+
+<nav><button id="n-inicio" onclick="ir('inicio')"><svg class="ic"><use href="#casa"/></svg>Inicio</button>
+ <button id="n-requisitos" onclick="ir('requisitos')"><svg class="ic"><use href="#lista"/></svg>Requisitos</button>
+ <button id="n-eval" onclick="iniciarEval()"><svg class="ic"><use href="#corazon"/></svg>Evaluación</button>
+ <button id="n-jornadas" onclick="ir('jornadas')"><svg class="ic"><use href="#calendario"/></svg>Sitios</button></nav>
+</div><script src="js/config.js"></script><script src="js/app.js"></script></body></html>

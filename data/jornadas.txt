@@ -1,0 +1,3 @@
+# id|titulo|fecha|hora|lugar   (DATOS DE DEMOSTRACION: reemplazar por jornadas reales validadas)
+1|Jornada de donación (demo)|Sáb 14 nov 2026|9:00 a 14:00|Campus universitario, Medellín (dato de ejemplo)
+2|Jornada de donación (demo)|Sáb 21 nov 2026|9:00 a 14:00|Centro de salud, Santiago (dato de ejemplo)

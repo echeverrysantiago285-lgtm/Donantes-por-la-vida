@@ -1,0 +1,42 @@
+# PREGUNTAS DE LA AUTOEVALUACION (EJEMPLO: las define y valida TSLB con la norma vigente)
+# Formato:  P|pregunta     O|opcion|efecto|motivo     R|nivel|titulo|mensaje
+# efecto = ok (sin observacion) | diferir (esperar y volver a intentar) | consultar (consultar al personal de salud)
+R|favorable|Orientación favorable|Según tus respuestas, podrías cumplir los requisitos generales. La evaluación final la hace el personal de salud en el centro de donación.
+R|diferir|Podrías donar más adelante|Según tus respuestas, conviene esperar antes de donar. Cuando se cumpla el plazo, podrás volver a intentarlo.
+R|consultar|Conviene consultar primero|Según tus respuestas, lo mejor es consultar al personal de salud antes de acudir a donar.
+P|¿Qué edad tienes?
+O|Menos de 17 años|consultar|Por ahora no cumples la edad mínima para donar.
+O|17 años|consultar|A los 17 años se necesita autorización escrita de tu padre, madre o tutor.
+O|De 18 a 70 años|ok|
+O|Más de 70 años|consultar|Consulta al personal de salud si puedes donar a tu edad.
+P|¿Cuánto pesas aproximadamente?
+O|Menos de 50 kg|consultar|El peso mínimo general para donar es de 50 kg.
+O|50 kg o más|ok|
+O|No lo sé|diferir|Pésate antes de acudir para confirmar que superas el peso mínimo.
+P|¿Cómo te sientes hoy?
+O|Bien, sin molestias|ok|
+O|Con fiebre, diarrea o enfermedad reciente|diferir|Espera a recuperarte por completo antes de donar.
+P|¿Tomas antibióticos o terminaste un tratamiento hace poco?
+O|Sí|diferir|El uso de antibióticos puede impedir donar temporalmente.
+O|No|ok|
+P|¿Tienes tatuajes, perforaciones o acupuntura recientes?
+O|Hace menos de 6 meses|diferir|Los tatuajes, perforaciones o acupuntura recientes pueden impedir donar temporalmente (plazo por confirmar con TSLB).
+O|Hace 6 meses o más|ok|
+O|No tengo|ok|
+P|¿Tuviste una cirugía o procedimiento médico o dental en los últimos 7 días?
+O|Sí|diferir|Espera a que pase el plazo después de cirugías y procedimientos.
+O|No|ok|
+P|¿Estás embarazada o tuviste un parto o aborto recientemente?
+O|Sí|diferir|El embarazo, parto o aborto reciente impide donar temporalmente.
+O|No|ok|
+O|No aplica|ok|
+P|¿Hace cuánto donaste sangre por última vez?
+O|Nunca he donado|ok|
+O|Hace menos de 3 meses|diferir|Debe pasar un tiempo entre donaciones (3 meses en hombres y 4 en mujeres).
+O|Hace 3 meses o más|ok|
+P|¿Dormiste al menos 5 horas y comiste algo en las últimas 4 horas?
+O|Sí|ok|
+O|No|diferir|Descansa y come algo antes de donar.
+P|¿Tienes tu documento de identificación (cédula o pasaporte)?
+O|Sí|ok|
+O|No|diferir|Necesitas llevar tu documento de identificación.

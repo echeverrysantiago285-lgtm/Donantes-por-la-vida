@@ -1,0 +1,55 @@
+/* ===== 1. Colores y base ===== */
+:root{--rojo:#D71920;--oscuro:#8B0E12;--claro:#FDEDED;--tx:#1F1F1F;--gris:#E5E5E5;--tx2:#666}
+*{box-sizing:border-box}body{margin:0;background:#eee;font-family:Arial,Helvetica,sans-serif;color:var(--tx)}
+#app{max-width:430px;min-height:100vh;margin:0 auto;background:#fff;position:relative;padding-bottom:70px}
+h1,h2,h3{margin:0}.pad{padding:0 18px}.v{display:none}.v.on{display:block}
+.ic{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+/* ===== 2. Encabezado y menu ===== */
+header{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;position:sticky;top:0;background:#fff;z-index:5}
+.marca{display:flex;align-items:center;gap:8px;font-weight:bold;font-size:15px;line-height:1.1;cursor:pointer}.marca .ic{color:var(--rojo);width:30px;height:30px;fill:var(--rojo)}
+.burger{background:none;border:0;font-size:28px;cursor:pointer;color:var(--tx)}
+#menu{display:none;position:absolute;right:12px;top:58px;background:#fff;border-radius:12px;box-shadow:0 6px 24px #0003;padding:6px;z-index:9;min-width:210px}
+#menu.on{display:block}#menu button{display:block;width:100%;text-align:left;background:none;border:0;padding:12px;font:15px Arial;cursor:pointer;border-radius:8px}#menu button:hover{background:var(--claro)}
+/* ===== 3. Botones y tarjetas ===== */
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--rojo);color:#fff;border:0;border-radius:24px;padding:13px 22px;font:bold 15px Arial;cursor:pointer}
+.btn.bl{background:#fff;color:var(--rojo);border:2px solid var(--rojo)}.btn.full{width:100%;justify-content:center}
+.card{background:var(--claro);border-radius:14px;padding:14px}.sub{color:var(--tx2);font-size:14px;line-height:1.5}
+.eyebrow{color:var(--rojo);font-size:11px;font-weight:bold;letter-spacing:1.5px;text-transform:uppercase}
+.titulo{font-size:28px;line-height:1.1;margin:6px 0 10px}.titulo em{color:var(--rojo);font-style:normal}h2.sec{font-size:22px;margin:26px 18px 12px}
+.volver{margin:14px 18px 0;background:none;border:0;color:var(--rojo);font:bold 14px Arial;cursor:pointer;padding:0}
+/* ===== 4. Espacios de imagen / video ===== */
+.medio{width:100%;background:var(--gris);overflow:hidden;display:flex;align-items:center;justify-content:center;color:#888;font-size:12px;text-align:center}
+.medio img,.medio video,.medio iframe{width:100%;height:100%;object-fit:cover;border:0;display:block}
+.m-hero{height:200px}.m-card{height:90px}.m-banner{height:200px}.m-paso{height:150px;border-radius:12px;margin-top:10px}.m-bloque{height:170px;border-radius:14px}
+/* ===== 5. Inicio ===== */
+.hero{display:flex;gap:0;align-items:stretch;background:linear-gradient(90deg,#fff 45%,#f6dede)}
+.hero>div:first-child{flex:1.2;padding:22px 0 22px 18px}.hero .medio{flex:1;min-height:230px;width:auto;border-radius:0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 18px}
+.tile{background:var(--claro);border:0;border-radius:14px;padding:0;text-align:left;cursor:pointer;overflow:hidden;font:bold 15px Arial;color:var(--tx)}
+.tile span{display:block;padding:10px 12px}.tile .medio{border-radius:0}
+.pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:0 10px;text-align:center}.pasos div{font-size:11px;color:var(--tx2)}
+.pasos b{display:block;color:var(--tx);font-size:12px;margin:6px 0 3px}.pasos .ic{color:var(--rojo);width:34px;height:34px}
+.amor{position:relative;margin-top:26px;background:#111;color:#fff;padding:26px 18px;overflow:hidden}
+.amor .medio{position:absolute;inset:0;height:100%;opacity:.45;border-radius:0}.amor>*:not(.medio){position:relative}
+.amor h2{font-size:28px;margin:6px 0 10px}.amor h2 em{color:var(--rojo);font-style:normal}
+footer{background:var(--oscuro);color:#fff;padding:22px 18px;font-size:13px}.redes{display:flex;gap:14px;margin:8px 0 14px}
+.redes a{color:#fff;border:1px solid #fff8;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-weight:bold;text-decoration:none}
+/* ===== 6. Requisitos, proceso, mitos, cuidados ===== */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:0 18px}
+.req{border:1px solid var(--gris);border-radius:14px;padding:12px 6px;text-align:center;font-size:12px;color:var(--tx2)}
+.req b{display:block;color:var(--tx);font-size:13px;margin:8px 0 3px}.req i{display:flex;margin:auto;width:46px;height:46px;border-radius:50%;background:var(--rojo);color:#fff;align-items:center;justify-content:center}
+.paso{display:flex;gap:12px;padding:0 18px 18px}.num{flex:none;width:34px;height:34px;border-radius:50%;background:var(--rojo);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold}
+.paso h3{font-size:16px;margin-bottom:4px}.mito{margin:0 18px 12px}.mito h3{font-size:17px}.mito .real{display:none;margin-top:10px;color:var(--tx);line-height:1.5}
+.mito.on .real{display:block}.dosc{display:grid;gap:10px;padding:0 90px}
+/* ===== 7. Formularios y autoevaluacion ===== */
+label{display:block;font-size:13px;font-weight:bold;margin:12px 0 4px}input,select{width:100%;padding:12px;border:1px solid #ccc;border-radius:10px;font:15px Arial}
+.ck{display:flex;gap:10px;align-items:flex-start;font-size:13px;margin:14px 0}.ck input{width:20px;margin:0}
+.err{display:none;background:var(--claro);color:var(--oscuro);padding:10px;border-radius:8px;margin:10px 0;font-size:13px}
+.barra{height:8px;background:var(--gris);border-radius:4px;margin:8px 0 16px}.barra div{height:100%;background:var(--rojo);border-radius:4px;width:0}
+.opc{display:block;width:100%;text-align:left;background:#fff;border:2px solid var(--gris);border-radius:12px;padding:14px;margin-bottom:10px;font:15px Arial;cursor:pointer}.opc.sel{border-color:var(--rojo);background:var(--claro)}
+.aviso{background:var(--claro);border-left:4px solid var(--rojo);padding:12px;border-radius:8px;font-size:13px;margin:14px 0}
+.fila{display:flex;gap:10px;justify-content:space-between;align-items:center;margin:8px 0;font-size:13px}
+/* ===== 8. Barra inferior ===== */
+nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;background:#fff;border-top:1px solid var(--gris);display:flex;z-index:6}
+nav button{flex:1;background:none;border:0;padding:8px 2px 6px;font:11px Arial;color:var(--tx2);cursor:pointer}nav button .ic{display:block;margin:0 auto 2px}
+nav button.on{color:var(--rojo);font-weight:bold;border-bottom:3px solid var(--rojo)}
